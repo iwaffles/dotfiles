@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/iwaffles/dev/darkroll'
+let g:netrw_dirhist_2='/Users/iwaffles/Desktop/json/working.json'
+let g:netrw_dirhist_3='/Users/iwaffles/dev/istherehockey'
+let g:netrw_dirhist_4='/Users/iwaffles/Desktop/estimator'
