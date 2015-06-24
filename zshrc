@@ -52,6 +52,11 @@ export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 source ~/.nvm/nvm.sh
 PATH="$PATH:/Users/iwaffles/dev/flow/"
-alias vim='/usr/local/Cellar/vim/7.4.488/bin/vim'
+#OLD: alias vim='/usr/local/Cellar/vim/7.4.488/bin/vim'
+alias vim='rvm system do /usr/local/bin/vim $@'
 PATH="$PATH:/Users/iwaffles/dev/darkroll/app/versions/20120222/units/mraid/code/js/client/"
+alias gbdate='for k in `git branch | sed s/^..//`; do echo -e `git log -1 --pretty=format:"%Cgreen%ci %Cred%cr%Creset" $k --`\\t"$k";done | sort'
+
+alias gmerged='git branch --merged | grep -v "\*" | xargs -n 1'
+alias gmergeddelete='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias gbdate='for k in `git branch | sed s/^..//`; do echo -e `git log -1 --pretty=format:"%Cgreen%ci %Cred%cr%Creset" $k --`\\t"$k";done | sort'

@@ -9,6 +9,9 @@ set number
 set noet
 set ts=4
 
+" fix copy/paste broken indentation
+" set paste
+
 " Project Based vimrc configurations:
 set exrc            " enable per-directory .vimrc files
 set secure          " disable unsafe commands in local .vimrc files
@@ -60,6 +63,12 @@ NeoBundle 'Shougo/vimproc.vim', {
 \ }
 NeoBundle 'henrik/vim-reveal-in-finder'
 NeoBundle 'powerline/powerline'
+NeoBundle 'vim-scripts/TaskList.vim'
+NeoBundle 'scrooloose/nerdcommenter'                
+" Rails: 
+NeoBundle 'git@github.com:tpope/vim-rails.git'
+NeoBundle 'vim-ruby/vim-ruby'
+
 " Required:
 call neobundle#end()
 
@@ -168,3 +177,20 @@ elseif executable('ack')
 endif
 
 au BufNewFile,BufRead *.ejs set filetype=html
+
+" Make VIM backspace like other apps allowing deleting indentatiion and spaces
+set backspace=indent,eol,start
+
+" CMD+s - https://apple.stackexchange.com/questions/49178/bind-cmd-s-in-vim
+":map <M-s> :w<kEnter>  "Works in normal mode, must press Esc first"
+":imap <M-s> <Esc>:w<kEnter>i "Works in insert mode, saves and puts back in insert mode"
+
+" Save all Buffers
+:nmap <C-s> :wa!<CR>
+:imap <C-s> <Esc>:wa!<CR>a
+:imap <C-s> <Esc><C-s>
+
+"" Copy/paste
+map ,c :w !pbcopy<cr><cr>
+map ,d :!pbcopy<cr>
+map ,p :r !pbpaste<CR>

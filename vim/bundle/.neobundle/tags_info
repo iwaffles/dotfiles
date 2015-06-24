@@ -1,9 +1,11 @@
+TaskList.vim
 YouCompleteMe
 ctrlp.vim
 ctrlsf.vim
 neobundle.vim
 neosnippet-snippets
 neosnippet.vim
+nerdcommenter
 powerline
 syntastic
 unite-outline
@@ -15,6 +17,8 @@ vim-fugitive
 vim-gitgutter
 vim-multiple-cursors
 vim-mustache-handlebars
+vim-rails
 vim-reveal-in-finder
+vim-ruby
 vimproc.vim
 vimshell
