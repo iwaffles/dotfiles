@@ -60,3 +60,5 @@ alias gbdate='for k in `git branch | sed s/^..//`; do echo -e `git log -1 --pret
 alias gmerged='git branch --merged | grep -v "\*" | xargs -n 1'
 alias gmergeddelete='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias gbdate='for k in `git branch | sed s/^..//`; do echo -e `git log -1 --pretty=format:"%Cgreen%ci %Cred%cr%Creset" $k --`\\t"$k";done | sort'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

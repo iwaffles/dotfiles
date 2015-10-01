@@ -2,6 +2,7 @@ TaskList.vim
 YouCompleteMe
 ctrlp.vim
 ctrlsf.vim
+dash.vim
 neobundle.vim
 neosnippet-snippets
 neosnippet.vim

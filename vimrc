@@ -69,6 +69,12 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'git@github.com:tpope/vim-rails.git'
 NeoBundle 'vim-ruby/vim-ruby'
 
+" ruby path for RVM:
+let g:ruby_path = system('rvm current')
+
+NeoBundle 'git@github.com:rizzatti/dash.vim.git'
+
+
 " Required:
 call neobundle#end()
 
@@ -86,7 +92,8 @@ let g:airline_theme="murmur"
 let g:airline#extensions#tabline#enabled = 1
 " colorscheme allhallowseve
 syntax enable
-colorscheme monokai
+"colorscheme monokai
+colorscheme Tomorrow
 
 set nocompatible          " We're running Vim, not Vi!
   syntax on                 " Enable syntax highlighting

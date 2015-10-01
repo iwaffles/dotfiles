@@ -136,6 +136,8 @@
 :CtrlSFClearHL	ctrlsf.txt	/*:CtrlSFClearHL*
 :CtrlSFClose	ctrlsf.txt	/*:CtrlSFClose*
 :CtrlSFOpen	ctrlsf.txt	/*:CtrlSFOpen*
+:Dash	dash.txt	/*:Dash*
+:DashKeywords	dash.txt	/*:DashKeywords*
 :Errors	syntastic.txt	/*:Errors*
 :GitGutter	gitgutter.txt	/*:GitGutter*
 :GitGutterAll	gitgutter.txt	/*:GitGutterAll*
@@ -303,6 +305,18 @@ ControlP	ctrlp.txt	/*ControlP*
 Ctrl-sub-C	youcompleteme.txt	/*Ctrl-sub-C*
 CtrlP	ctrlp.txt	/*CtrlP*
 CtrlSF	ctrlsf.txt	/*CtrlSF*
+DashBugs	dash.txt	/*DashBugs*
+DashChangelog	dash.txt	/*DashChangelog*
+DashCommands	dash.txt	/*DashCommands*
+DashConfig	dash.txt	/*DashConfig*
+DashConfig_map	dash.txt	/*DashConfig_map*
+DashContents	dash.txt	/*DashContents*
+DashContributing	dash.txt	/*DashContributing*
+DashCredits	dash.txt	/*DashCredits*
+DashIntro	dash.txt	/*DashIntro*
+DashKeyBindings	dash.txt	/*DashKeyBindings*
+DashLicense	dash.txt	/*DashLicense*
+DashMappings	dash.txt	/*DashMappings*
 E227:-mapping-already-exists-for-blah	youcompleteme.txt	/*E227:-mapping-already-exists-for-blah*
 GLIBC_2.XX-not-found()	youcompleteme.txt	/*GLIBC_2.XX-not-found()*
 GetParent	youcompleteme.txt	/*GetParent*
@@ -428,6 +442,7 @@ ctrlsf-options	ctrlsf.txt	/*ctrlsf-options*
 ctrlsf-quickstart	ctrlsf.txt	/*ctrlsf-quickstart*
 ctrlsf-usage	ctrlsf.txt	/*ctrlsf-usage*
 ctrlsf.txt	ctrlsf.txt	/*ctrlsf.txt*
+dash.txt	dash.txt	/*dash.txt*
 filter-overrides	syntastic.txt	/*filter-overrides*
 ft-ruby-omni	ft-ruby-omni.txt	/*ft-ruby-omni*
 ft-ruby-syntax	ft-ruby-syntax.txt	/*ft-ruby-syntax*
