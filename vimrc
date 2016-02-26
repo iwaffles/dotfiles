@@ -33,14 +33,16 @@ call neobundle#begin(expand('/Users/iwaffles/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Add or remove your Bundles here:
-NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'terryma/vim-multiple-cursors'
-NeoBundle 'Valloric/YouCompleteMe'
+"NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'honza/vim-snippets'
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 " quick find method definitions:
@@ -49,6 +51,11 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'isRuslan/vim-es6'
+NeoBundle 'moll/vim-node'
+NeoBundle 'elzr/vim-json'
+"NeoBundle 'rstacruz/vim-hyperstyle'
 NeoBundleLazy 'kchmck/vim-coffee-script',    { 'autoload' : { 'filename_patterns' :[ "\.coffee$" ], }, }
 NeoBundle 'dyng/ctrlsf.vim'
 NeoBundle 'airblade/vim-gitgutter'
@@ -88,12 +95,18 @@ NeoBundleCheck
 
 let g:syntastic_javascript_checkers=['jshint']
 
-let g:airline_theme="murmur"
+"let g:airline_theme="murmur"
+let g:airline_theme="tomorrow"
 let g:airline#extensions#tabline#enabled = 1
 " colorscheme allhallowseve
 syntax enable
 "colorscheme monokai
-colorscheme Tomorrow
+"colorscheme Tomorrow
+"
+" Solarized config: 
+set background=light
+let g:solarized_termcolors=256
+colorscheme solarized
 
 set nocompatible          " We're running Vim, not Vi!
   syntax on                 " Enable syntax highlighting
@@ -165,6 +178,7 @@ if executable('ag')
   "       \ '--ignore ''**/*.pyc'' -g ""'
   let g:unite_source_grep_command = 'ag'
   let g:unite_source_grep_default_opts =
+		\ ' -i ' .
         \ '--line-numbers --nocolor --nogroup --hidden --ignore ' .
         \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'' ' .
         \ '--ignore ''**/*.pyc'''
@@ -201,3 +215,48 @@ set backspace=indent,eol,start
 map ,c :w !pbcopy<cr><cr>
 map ,d :!pbcopy<cr>
 map ,p :r !pbpaste<CR>
+
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+
+" note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 2
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+" Enable omni completion.
+autocmd FileType css,scss setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+" Mustache Abbreviations
+let g:mustache_abbreviations = 1
