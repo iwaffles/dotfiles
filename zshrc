@@ -6,10 +6,15 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias dm="docker-machine"
+#must be run from the streisand-files directory (in my case it's ~/streisand-files)
+alias streisand-connect="sudo openconnect --cafile ca-cert.pem --certificate client.p12 --key-password 'unrights-Littcarrs' --pfs 104.236.144.217:4443"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -37,7 +42,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/iwaffles/.rvm/bin:/usr/local/share/npm/bin/
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/iwaffles/.rvm/bin:/usr/local/share/npm/bin/
 
 export PATH=$PATH:$HOME/scripts/AWS-ElasticBeanstalk-CLI-2.3/eb/macosx/python2.7/
 ### Added by the Heroku Toolbelt
@@ -62,3 +67,5 @@ alias gmergeddelete='git branch --merged | grep -v "\*" | xargs -n 1 git branch 
 alias gbdate='for k in `git branch | sed s/^..//`; do echo -e `git log -1 --pretty=format:"%Cgreen%ci %Cred%cr%Creset" $k --`\\t"$k";done | sort'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

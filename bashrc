@@ -8,3 +8,5 @@ alias sudo='sudo ' # http://askubuntu.com/questions/22037/aliases-not-available-
 alias glp='git log --pretty=format:"%h - %an, %ar : %s"'
 export NVM_DIR="/Users/iwaffles/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -1,14 +1,15 @@
 TaskList.vim
+YouCompleteMe
 ctrlp.vim
 ctrlsf.vim
 dash.vim
 neobundle.vim
-neocomplete
 neosnippet
 neosnippet-snippets
 nerdcommenter
 powerline
 syntastic
+tcomment_vim
 unite-outline
 unite.vim
 vim-airline
@@ -26,5 +27,6 @@ vim-rails
 vim-reveal-in-finder
 vim-ruby
 vim-snippets
+vim-surround
 vimproc.vim
 vimshell

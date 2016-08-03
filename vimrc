@@ -33,7 +33,7 @@ call neobundle#begin(expand('/Users/iwaffles/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Add or remove your Bundles here:
-NeoBundle 'Shougo/neocomplete'
+"NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
@@ -41,7 +41,7 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'terryma/vim-multiple-cursors'
-"NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'honza/vim-snippets'
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -75,6 +75,11 @@ NeoBundle 'scrooloose/nerdcommenter'
 " Rails: 
 NeoBundle 'git@github.com:tpope/vim-rails.git'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-surround'
+
+
+" TComment - fast commenting/toggling
+NeoBundle 'git@github.com:tomtom/tcomment_vim.git'
 
 " ruby path for RVM:
 let g:ruby_path = system('rvm current')
@@ -106,7 +111,8 @@ syntax enable
 " Solarized config: 
 set background=light
 let g:solarized_termcolors=256
-colorscheme solarized
+"colorscheme solarized
+colorscheme janah
 
 set nocompatible          " We're running Vim, not Vi!
   syntax on                 " Enable syntax highlighting
